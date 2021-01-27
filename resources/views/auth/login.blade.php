@@ -27,7 +27,7 @@
       <form action="{{ asset('login') }}" method="post">
         @csrf
         <div class="input-group mb-3">
-            <input id="username" type="username" placeholder="Input your username" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
+            <input id="username" type="text" placeholder="Input your username" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
@@ -69,7 +69,6 @@
         </div>
       </form>
 
-     
         @if (Route::has('password.request'))
         <a class="btn btn-link" href="{{ route('password.request') }}">
             {{ __('Forgot Your Password?') }}
