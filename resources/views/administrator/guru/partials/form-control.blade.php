@@ -32,6 +32,7 @@
   <label for="courses" class="col-sm-2 col-form-label">Mata Pelajaran yang diampu</label>
   <div class="col-sm-10">
     <select name="courses[]" id="courses" class="form-control select2Choice" multiple>
+        
       @foreach ($courses as $course)
           <option {{ $teacher->courses()->find($course) ? 'selected' : '' }} value="{{ $course->id }}">{{ $course->name }}</option>
       @endforeach
